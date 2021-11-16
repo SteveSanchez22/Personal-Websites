@@ -1,0 +1,387 @@
+<?php
+
+
+$message_sent = false;
+
+    if(isset($_POST['email']) && $_POST['email'] != '') {
+
+        if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+
+            // Local Variables
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $messageSubject = $_POST['subject'];
+            $message = $_POST['message'];
+
+            $to = "me@stevealejandrosanchez.com";
+            $body = "";
+
+            $body .= "From : ".$userName. "\r\n";
+            $body .= "Email : ".$userEmail. "\r\n";
+            $body .= "Message : ".$message. "\r\n";
+
+
+            mail($to, $messageSubject, $body);
+            $message_sent = true;
+
+        }
+    }
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WZJR3D9');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta -->
+    <meta name="description"
+        content="Steve Alejandro Sanchez (Psst the key to pronouncing my name is start English and transition to a Spanish accent), a London based junior developer. Explore more about me, what I am getting up to and more!">
+    <meta name="keywords" content="steve sanchez, steve alejandro sanchez, junior developer">
+    <meta http-equiv="content-language" content="en-gb">
+    <meta name="author" content="Steve Alejandro Sanchez">
+
+    <!--  Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ubuntu GGL Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- magnific-popup.js - magnific-popup.min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- Font Awesome CDNJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- JQUERY CDNJS  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- magnific-popup.js - magnific-popup.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <title>Steve Alejandro Sanchez Portfolio</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJR3D9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="inner-width">
+            <a href="/" class="logo"></a>
+            <button class="menu-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#works">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+        <div class="inner-width">
+            <div class="content">
+                <!-- Blank H1 - changes content -->
+                <h1> </h1>
+                <div class="sm">
+                    <a href="https://github.com/SteveSanchez22" target="__Blank" class="fab fa-github"></a>
+                    <!-- <a href="#" class="fab fa-instagram"></a> -->
+                    <a href="https://www.linkedin.com/in/steve-alejandro-sanchez/" target="__Blank"
+                        class="fab fa-linkedin-in"></a>
+                </div>
+                <div class="buttons">
+                    <a href="#contact">Contact me</a>
+                    <!-- CTA implemented to get user to download or view my CV -->
+                    <a href="https://stevealejandrosanchez.com/downloads/Steve-Resume.pdf" target="_blank">Download CV</a>
+                </div>
+            </div>
+            <div id="section04" class="demo">
+                <a href="#about"><span></span>Scroll</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home  -->
+
+    <section id="about">
+        <div class="inner-width">
+            <h1 class="section-title">About</h1>
+            <div class="about-content">
+                <img src="images/Steve-sanchez.jpg" alt="steve-alejandro-sanchez" class="about-pic">
+                <div class="about-text">
+                    <h2>Steve Alejandro Sanchez</h2>
+                    <h3>
+                        <span>Developer</span>
+                        <span>Designer</span>
+                        <span>Programmer</span>
+                    </h3>
+                    <p>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facilis, impedit, rem maxime
+                        quo, atque voluptates reiciendis labore praesentium dignissimos nostrum tempore ducimus vitae!
+                        Quas totam veniam et tempora quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                        natus provident non eius quas, culpa nisi numquam fugit cumque, at qui alias fuga commodi maxime
+                        explicabo quisquam nesciunt laudantium! Atque.
+
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, fugiat quas voluptas
+                        molestiae dolorum dolore. Hic alias nostrum impedit quas, autem, quisquam tenetur, tempore
+                        praesentium suscipit eos ipsum doloribus architecto.
+                        Commodi, culpa nisi cum ea praesentium nam corrupti esse libero distinctio dolores dolorem
+                        provident cumque quam natus obcaecati, excepturi eum exercitationem. Beatae veritatis quibusdam
+                        repudiandae voluptatem, pariatur ex necessitatibus vitae.
+                        Deserunt corporis voluptates hic distinctio aperiam, numquam velit error amet molestiae et quia
+                        aliquam vel assumenda totam sed ab. Omnis quis autem ipsam qui, beatae labore hic quaerat maxime
+                        nemo!
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar html"></div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar css"></div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar js"></div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>PHP</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill-bar php"></div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>SQL</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar sql"></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Python</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar py"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+
+    <section id="education">
+        <div class="inner-width">
+            <h1 class="section-title">Education & Experiences</h1>
+            <div class="time-line">
+                <div class="block">
+                    <h4>Present</h4>
+                    <h3>Exploring & Development</h3>
+                    <p>
+                        <!-- Add semantic to keywords -  -->
+                        I am currently in search for a Software Developer role. My intrests are within Web Development,
+                        User experience and Machine learning. Keep an eye out on my Github account to see what I have
+                        been getting up too!
+                    </p>
+                </div>
+                <div class="block">
+                    <h4>2018 - 2019</h4>
+                    <h3>Notamvis</h3>
+                    <p>
+                        I joined Notamvis IT deparment as an Intern for my one year placement which was part of my
+                        Undergraduate Degree in Computing at the University of Kent. Here, I was exposed to different
+                        areas such as Digital Marketing and Web Development.
+                    </p>
+                </div>
+                <div class="block">
+                    <h4>2018 - 2019</h4>
+                    <h3>Weiguo Solutions</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, distinctio. Ad, minus neque
+                        incidunt asperiores quaerat non sed. Libero facere hic dolores, rem exercitationem ad iure quas
+                        quaerat illo voluptatem.
+                    </p>
+                </div>
+                <div class="block">
+                    <h4>2018 - 2019</h4>
+                    <h3>GTI Media</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, distinctio. Ad, minus neque
+                        incidunt asperiores quaerat non sed. Libero facere hic dolores, rem exercitationem ad iure quas
+                        quaerat illo voluptatem.
+                    </p>
+                </div>
+                <div class="block">
+                    <h4>2016 - 2020</h4>
+                    <h3>University Of Kent</h3>
+                    <p>
+                        My initial start into the field of Computer Science! My period studying at the University of
+                        Kent can only be desribed as a rollercoaster ride. My passion to programming and computer
+                        science was very a love hate relationship. Through my experience with University I was able to
+                        discover what I wanted to persue and focus.
+                    </p>
+                </div>
+                <div class="block">
+                    <h4>1997 - 2016</h4>
+                    <h3>My Life</h3>
+                    <p>
+                        My journey to University was very much ingrained from very young. Although education has played
+                        a major role in my life, I have always struggled, Until I met my private tutor at the age of 10.
+                        He turned an under achieving student into a person who exceeded teachers result predictions. He
+                        has
+                        taught me life lessons, which to this day I use!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio -->
+    <section id="works" class="dark">
+        <div class="inner-width">
+            <h1 class="section-title">Portfolio</h1>
+            <div class="works">
+                <a href="https://github.com/SteveSanchez22" target="_blank" class="work">
+                    <img src="images/Multi.webp" alt="">
+                    <div class="info">
+                        <h3>Data Analysis</h3>
+                        <div class="cat">Coming Soon</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/SteveSanchez22/Personal-Websites" target="_blank" class="work">
+                    <img src="images/Night.webp" alt="">
+                    <div class="info">
+                        <h3>Personal Websites</h3>
+                        <div class="cat">Check out my website archive</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/SteveSanchez22" target="_blank" class="work">
+                    <img src="images/Red.webp" alt="">
+                    <div class="info">
+                        <h3>User Experience</h3>
+                        <div class="cat">Coming Soon</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/SteveSanchez22" target="_blank" class="work">
+                    <img src="images/Sunset.webp" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Coming Soon</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/SteveSanchez22" target="_blank" class="work">
+                    <img src="images/Multi.webp" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Coming Soon</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/SteveSanchez22" target="_blank" title="Directing to Steve's Github"
+                    class="work">
+                    <img src="images/Red.webp" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Coming Soon</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+        <div class="inner-width">
+            <h1 class="section-title">Get in touch</h1>
+
+            <form action="index.php" method="POST" class="contact-form">
+                <input type="text" class="userName" name="name" placeholder="Name" required>
+                <input type="email" class="userEmail" name="email" placeholder="Email" required>
+                <input type="text" class="userSubject" name="subject" placeholder="Subject">
+                <textarea class="userMessage" name="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner-width">
+            <div class="copyright">
+                copyright &copy; 2021 | Steve Alejandro Sanchez. All rights reserved.
+            </div>
+            <div class="sm">
+                <a href="https://github.com/SteveSanchez22" target="__Blank" class="fab fa-github"></a>
+                <!-- <a href="#" class="fab fa-instagram"></a> -->
+                <a href="https://www.linkedin.com/in/steve-alejandro-sanchez/" target="__Blank"
+                    class="fab fa-linkedin-in"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
