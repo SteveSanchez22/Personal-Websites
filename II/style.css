@@ -133,7 +133,7 @@ html {
 }
 
 #home .content h1::after {
-	content: "Hi I'm Steve Sanchez";
+	content: "Steve Alejandro Sanchez";
 	animation: textanim 10s linear infinite;
 }
 
@@ -145,7 +145,7 @@ html {
 		content: "A Designer";
 	}
 	75% {
-		content: "I'm Creative";
+		content: "And .... Creative";
 	}
 }
 
