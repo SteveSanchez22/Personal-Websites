@@ -36,8 +36,9 @@ Bug Fixes :
 
 <br>
 
-Last updated : 16 Nov 21
-Version Update : 2.1
+**Last updated : 16 Nov 21**
+<br>
+**Version Update : 2.1**
 
 <br>
 
